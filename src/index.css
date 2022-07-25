@@ -5,20 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* font-family: "Anton", sans-serif; */
 }
 
 .site-container {
   min-height: 100vh;
 }
 
-main {
-  flex: 1;
+.navbar-primary {
+  background-color: #EAD637;
+  color: #010400;
+  font-family: "Anton", sans-serif;
 }
 
-.btn-primary {
-  background-color: #f0c040;
-  color: #000000;
+.logo-header {
+  width: 10rem;
+  margin: -0.5em 0 -0.5em 0;
+}
+
+footer {
+  background-color: #30322E;
+  color: #F1F1F1;
+  padding-block: 0.5rem;
+}
+
+main {
+  flex: 1;
 }
 
 .products {

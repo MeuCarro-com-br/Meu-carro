@@ -11,10 +11,11 @@ export default class App extends React.Component {
     return (
       <div className="d-flex flex-column site-container">
         <header>
-          <Navbar bg="dark" variant="dark">
+          <Navbar variant="primary">
             <Container>
               <LinkContainer to="/">
-                <Navbar.Brand>amazona</Navbar.Brand>
+                {/* <Navbar.Brand>MeuCarro</Navbar.Brand> */}
+                <img src={require('./pics/Logo-Black.png')} className="logo-header" />
               </LinkContainer>
             </Container>
           </Navbar>

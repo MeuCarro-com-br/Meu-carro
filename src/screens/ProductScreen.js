@@ -75,9 +75,9 @@ function ProductScreen() {
                 numReviews={product.numReviews}
               ></Rating>
             </ListGroup.Item>
-            <ListGroup.Item>Pirce : ${product.price}</ListGroup.Item>
+            <ListGroup.Item>Preço : ${product.price}</ListGroup.Item>
             <ListGroup.Item>
-              Description:
+              Descrição:
               <p>{product.description}</p>
             </ListGroup.Item>
           </ListGroup>
@@ -88,7 +88,7 @@ function ProductScreen() {
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <Row>
-                    <Col>Price:</Col>
+                    <Col>Preço:</Col>
                     <Col>${product.price}</Col>
                   </Row>
                 </ListGroup.Item>
@@ -97,9 +97,9 @@ function ProductScreen() {
                     <Col>Status:</Col>
                     <Col>
                       {product.countInStock > 0 ? (
-                        <Badge bg="success">In Stock</Badge>
+                        <Badge bg="success">Em Stock</Badge>
                       ) : (
-                        <Badge bg="danger">Unavailable</Badge>
+                        <Badge bg="danger">Esgotado</Badge>
                       )}
                     </Col>
                   </Row>
@@ -109,7 +109,7 @@ function ProductScreen() {
                   <ListGroup.Item>
                     <div className="d-grid">
                       <Button variant="primary">
-                        Add to Cart
+                        Adicionar ao carrinho
                       </Button>
                     </div>
                   </ListGroup.Item>
