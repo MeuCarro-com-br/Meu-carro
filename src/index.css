@@ -12,9 +12,9 @@ body {
 }
 
 .navbar-primary {
-  background-color: #EAD637;
+  background-color: #ead637;
   color: #010400;
-  font-family: "Anton", sans-serif;
+  font-weight: 700;
 }
 
 .logo-header {
@@ -22,14 +22,64 @@ body {
   margin: -0.5em 0 -0.5em 0;
 }
 
+.title-name {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: x-large;
+  font-family: "Anton", sans-serif;
+}
+
+.home-container {
+  background-color: #30322e;
+  color: #f1f1f1;
+  max-height: 200px;
+  overflow: hidden;
+  background-position: center top;
+  margin: 0 0 1rem 0;
+}
+
+.home-container button {
+  background-color: #ead637;
+  color: #010400;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.home-container .left-col {
+  padding: 3rem;
+}
+
+.home-container .right-col {
+  position: relative;
+}
+
+.home-container img {
+  position: absolute;
+  top: -0.5em;
+  left: 0;
+  width: 100%;
+  object-fit: fill;
+}
+
 footer {
-  background-color: #30322E;
-  color: #F1F1F1;
+  background-color: #30322e;
+  color: #f1f1f1;
   padding-block: 0.5rem;
 }
 
 main {
   flex: 1;
+  padding-top: 0;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  background-color: #ead637;
+  color: #010400;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  border: none;
 }
 
 .products {
@@ -56,6 +106,20 @@ main {
   padding: 1rem;
 }
 
+.link-name {
+  text-decoration: none;
+  color: #010400;
+  font-family: "Anton", sans-serif;
+}
+
 .img-large {
   max-width: 100%;
+}
+
+.img-thumbnail {
+  height: 80px;
+}
+
+.small-container {
+  max-width: 600px;
 }

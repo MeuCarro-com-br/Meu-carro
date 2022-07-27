@@ -6,16 +6,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom'
+import { StoreProvider } from './Store';
 
 class Main extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <Router>
-          <HelmetProvider>
-            <App />
-          </HelmetProvider>
-        </Router>
+        <StoreProvider>
+          <Router>
+            <HelmetProvider>
+              <App />
+            </HelmetProvider>
+          </Router>
+        </StoreProvider>
       </React.StrictMode>
     );
   }

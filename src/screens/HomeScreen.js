@@ -7,6 +7,8 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/esm/Container';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -44,12 +46,26 @@ function HomeScreen() {
       <Helmet>
         <title>MeuCarro.com.br</title>
       </Helmet>
-      <h1>Nossos produtos</h1>
+      <Container className="home-container">
+        <Row>
+          <Col sm={5} className="left-col">
+            <t1 className="title-name">A melhor coleção</t1>
+            <p>Acrescenta o teu</p>
+            <Button>
+              Insere agora
+            </Button>
+          </Col>
+          <Col sm={7} className="right-col">
+            <img src={require('../pics/cars.png')} alt="Img-principal"/>
+          </Col>
+        </Row>
+      </Container>
+      <h1 className="link-name">Nossos produtos</h1>
       <div className="products">
         {loading ? (
           <LoadingBox />
-          ) : error ? (
-            <MessageBox variant="danger">{error}</MessageBox>
+        ) : error ? (
+          <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <Row>
             {products.map((product) => (
