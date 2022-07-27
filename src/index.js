@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom'
+import { StoreProvider } from './Store';
 
 class Main extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <Router>
-          <App />
-        </Router>
+        <StoreProvider>
+          <Router>
+            <HelmetProvider>
+              <App />
+            </HelmetProvider>
+          </Router>
+        </StoreProvider>
       </React.StrictMode>
     );
   }
@@ -20,7 +26,7 @@ class Main extends React.Component {
 const root =
   ReactDOM.createRoot(document.getElementById("root"));
 
-  root.render(<Main />);
+root.render(<Main />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
