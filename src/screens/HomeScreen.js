@@ -49,10 +49,10 @@ function HomeScreen() {
       <Container className="home-container">
         <Row>
           <Col sm={5} className="left-col">
-            <t1 className="title-name">A melhor coleção</t1>
-            <p>Acrescenta o teu</p>
+            <t1 className="title-name">Nós temos o que você precisa</t1>
+            <p>A melhor coleção para a melhor escolha!</p>
             <Button>
-              Insere agora
+              Fazer login
             </Button>
           </Col>
           <Col sm={7} className="right-col">
