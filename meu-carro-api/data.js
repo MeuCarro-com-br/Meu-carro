@@ -75,7 +75,7 @@ const data = {
     {
       // _id: '5',
       name: "Honda CB 1000R",
-      slug: "Honda-CB1000R",
+      slug: "honda-cb-1000r",
       category: "Motos",
       image: '/images/honda-cb.jpeg',
       price: 13000,
@@ -89,7 +89,7 @@ const data = {
     {
       // _id: '6',
       name: "Honda CG 160",
-      slug: "Honda-CG160",
+      slug: "honda-cg160",
       category: "Motos",
       image: '/images/honda-cg.jpeg',
       price: 2800,
@@ -102,8 +102,8 @@ const data = {
     },
     {
       // _id: '7',
-      name: "Yamaha Fazer FZ25: Thor Edition",
-      slug: "Yamaha-Fazer-FZ25-Thor",
+      name: "Yamaha Fazer FZ25",
+      slug: "yamaha-fazer-fz25",
       category: "Motos",
       image: '/images/yamaha-fazer.jpeg',
       price: 4000,
@@ -117,7 +117,7 @@ const data = {
     {
       // _id: '8',
       name: "Yamaha NEO 125 UBS",
-      slug: "Yamaha-NEO125-UBS",
+      slug: "yamaha-neo-125-ubs",
       category: "Motos",
       image: '/images/yamaha-neo.jpeg',
       price: 2050,
