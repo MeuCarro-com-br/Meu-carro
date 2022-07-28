@@ -18,7 +18,7 @@ do produto, carrinho de produtos, um ambiente "Admin" com: CRUD implementado par
 
 ### Rascunho
 
-![](/public/Rascunho.jpg)
+![](/meu-carro/public/Rascunho.jpg)
 
 ### Links
 
@@ -87,8 +87,8 @@ Tivemos dificuldades usando o React Context e o MongoDB (primeira vez usando ess
 
 ### Recursos úteis
 
-- [Recurso das aulas react](https://github.com/toti-br/react-aula-1-turma-15)
-- [Recurso do CSS usado](https://tailwindcss.com/)
+- [Recurso do react](https://github.com/toti-br/react-aula-1-turma-15)
+- [Recurso do CSS react](https://react-bootstrap.netlify.app/)
 - Estes são os recursos que usados no desenvolvimento deste "E-commerce".
 
 ## Autor
