@@ -30,13 +30,6 @@ function EditScreen() {
         error: '',
     });
 
-    // function Update(e) {
-    //     e.preventDefault()
-    //     app.put(`http://localhost:3003/contacts/${id}`, data)
-    //         .then(
-    //             navigate("/")
-    //         )
-    // }
     useEffect(() => {
         const fetchData = async () => {
             dispatch({ type: 'FETCH_REQUEST' });
