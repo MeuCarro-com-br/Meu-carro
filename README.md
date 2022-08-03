@@ -10,7 +10,7 @@ do produto, carrinho de produtos, um ambiente "Admin" com: CRUD implementado par
 - [Meu processo](#meu-processo)
   - [Feito com](#feito-com)
   - [O que eu aprendi](#o-que-eu-aprendi)
-  - [Dificuldades](#dificuldades)
+  - [Uso Local](#uso-local)
   - [Recursos úteis](#recursos-uteis)
 - [Autor](#autor)
 
@@ -31,7 +31,7 @@ do produto, carrinho de produtos, um ambiente "Admin" com: CRUD implementado par
 
 - Desenvolvido com  React, Context, Node, Express, MongoDB, Mongoose.
 
-### O que eu aprendi (até agora)
+### O que eu aprendi
 
 Inserir props condicionais nas tags importadas do bootstrap.
 
@@ -81,9 +81,41 @@ mongoose
   });
 ```
 
-### Dificuldades
+### Uso Local
 
-Tivemos dificuldades usando o React Context e o MongoDB (primeira vez usando essas ferramentas).
+#### 1. Clone o repositorio
+
+```
+$ git clone https://github.com/MeuCarro-com-br/Meu-carro.git
+$ cd meu-carro
+```
+
+#### 2. Crie um arquivo .env
+
+- Pode duplicar o .env.exemplo na pasta meu-carro-api e renomear esse arquivo de .env
+
+#### 3. Crie o banco com MongoDB
+
+- Local MongoDB
+  - Para instalar [aqui](https://www.mongodb.com/try/download/community)
+  - No arquivo .env atualize o MONGODB_URI=mongodb://localhost/meu-carro
+
+#### 4. Para iniciar o Backend | meu-carro
+
+```
+$ cd meu-carro-api
+$ npm install
+$ npm start
+```
+
+#### 5. Para iniciar o Frontend | meu-carro-api
+
+```
+# precisa abrir um novo terminal
+$ cd meu-carro
+$ npm install
+$ npm start
+```
 
 ### Recursos úteis
 
