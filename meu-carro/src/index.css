@@ -73,13 +73,20 @@ main {
   padding-top: 0;
 }
 
-.btn-primary,
-.btn-outline-primary {
+.btn-primary {
   background-color: #ead637;
   color: #010400;
   text-transform: uppercase;
   font-family: "Anton", sans-serif;
   border: none;
+}
+
+.btn-outline-primary {
+  background-color: #ead637;
+  color: #010400;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  border: 1px solid #afafaf;
 }
 
 .products {

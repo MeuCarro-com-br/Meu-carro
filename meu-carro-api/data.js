@@ -67,8 +67,8 @@ const data = {
       price: 9000,
       countInStock: 5,
       brand: "Renault",
-      rating: 4.5,
-      numReviews: 10,
+      rating: 3.5,
+      numReviews: 31,
       description:
         "O Kwid é um automóvel hatch subcompacto da Renault, lançado inicialmente na Índia, em 2015. No Brasil, seu lançamento ocorreu em agosto de 2017 sendo fabricado em São José dos Pinhais (PR). O veículo tem como principais concorrentes o Volkswagen Up e o Fiat Mobi, dos quais se diferencia pelo design, como um crossover"
     },
@@ -81,8 +81,8 @@ const data = {
       price: 13000,
       countInStock: 5,
       brand: "Honda",
-      rating: 4.5,
-      numReviews: 10,
+      rating: 2.5,
+      numReviews: 26,
       description:
         "A CB 1000R é uma moto Honda Naked que possui Acelerador eletrônico TBW, Iluminação Full Led e mais. Confira e encontre a moto ideal para você!"
     },
@@ -95,8 +95,8 @@ const data = {
       price: 2800,
       countInStock: 5,
       brand: "Honda",
-      rating: 4.5,
-      numReviews: 10,
+      rating: 2.0,
+      numReviews: 19,
       description:
         "A CG 160 Titan é uma moto Honda da categoria City que possui Carenagem Agressiva, Motor 162,7cc e muito mais. Confira e encontre a moto ideal para você!"
     },
@@ -109,8 +109,8 @@ const data = {
       price: 4000,
       countInStock: 5,
       brand: "Yamaha",
-      rating: 4.5,
-      numReviews: 10,
+      rating: 1.5,
+      numReviews: 9,
       description:
         "A Fazer FZ25 ABS oferece uma ótima posição de pilotagem, combinando conforto e esportividade para o seu dia a dia. Um equilíbrio perfeito entre prazer e diversão. Agora com nova posição do lampejador do farol que facilita o uso. Com pistão forjado em alumínio e cilindro revestido em cerâmica, o motor da moto entrega durabilidade e economia. Possui sistema ABS nas duas rodas, que evita o travamento das rodas em frenagens bruscas ou em baixa aderência, como dias de chuva, garantindo excelente controle na pilotagem. "
     },
@@ -123,69 +123,11 @@ const data = {
       price: 2050,
       countInStock: 5,
       brand: "Yamaha",
-      rating: 4.5,
-      numReviews: 10,
+      rating: 3.1,
+      numReviews: 17,
       description:
         "É uma scooter de entrada de 125cc equipado com câmbio CVT e rodas de 14″ com freios unificados (UBS) O motor é um monocilíndrico de 125 cm³ refrigerado a ar, capaz de gerar até 9,8 CV de potência máxima a 8.000 rpm e 1,0 kgfm de torque a 5.500 rpm. O câmbio é automático do tipo CVT (não há embreagem ou pedal de câmbio) e o tanque de combustível tem capacidade para 4,2 litros."
     }
   ]
-  // motos: [
-  //   {
-  //     _id: '5',
-  //     name: "Honda CB 1000R",
-  //     slug: "Honda-CB1000R",
-  //     category: "Motos",
-  //     image: '/images/honda-cb.jpg',
-  //     price: 13000,
-  //     countInStock: 5,
-  //     brand: "Honda",
-  //     rating: 4.5,
-  //     numReviews: 10,
-  //     description:
-  //       "A CB 1000R é uma moto Honda Naked que possui Acelerador eletrônico TBW, Iluminação Full Led e mais. Confira e encontre a moto ideal para você!"
-  //   },
-  //   {
-  //     _id: '6',
-  //     name: "Honda CG 160",
-  //     slug: "Honda-CG160",
-  //     category: "Motos",
-  //     image: '/images/honda-cg.jpg',
-  //     price: 2800,
-  //     countInStock: 5,
-  //     brand: "Honda",
-  //     rating: 4.5,
-  //     numReviews: 10,
-  //     description:
-  //       "A CG 160 Titan é uma moto Honda da categoria City que possui Carenagem Agressiva, Motor 162,7cc e muito mais. Confira e encontre a moto ideal para você!"
-  //   },
-  //   {
-  //     _id: '7',
-  //     name: "Yamaha Fazer FZ25: Thor Edition",
-  //     slug: "Yamaha-Fazer-FZ25-Thor",
-  //     category: "Motos",
-  //     image: '/images/yamaha-fazer.jpg',
-  //     price: 4000,
-  //     countInStock: 5,
-  //     brand: "Yamaha",
-  //     rating: 4.5,
-  //     numReviews: 10,
-  //     description:
-  //       "A Fazer FZ25 ABS oferece uma ótima posição de pilotagem, combinando conforto e esportividade para o seu dia a dia. Um equilíbrio perfeito entre prazer e diversão. Agora com nova posição do lampejador do farol que facilita o uso. Com pistão forjado em alumínio e cilindro revestido em cerâmica, o motor da moto entrega durabilidade e economia. Possui sistema ABS nas duas rodas, que evita o travamento das rodas em frenagens bruscas ou em baixa aderência, como dias de chuva, garantindo excelente controle na pilotagem. "
-  //   },
-  //   {
-  //     _id: '8',
-  //     name: "Yamaha NEO 125 UBS",
-  //     slug: "Yamaha-NEO125-UBS",
-  //     category: "Motos",
-  //     image: '/images/yamaha-neo.jpg',
-  //     price: 2050,
-  //     countInStock: 5,
-  //     brand: "Yamaha",
-  //     rating: 4.5,
-  //     numReviews: 10,
-  //     description:
-  //       "É uma scooter de entrada de 125cc equipado com câmbio CVT e rodas de 14″ com freios unificados (UBS) O motor é um monocilíndrico de 125 cm³ refrigerado a ar, capaz de gerar até 9,8 CV de potência máxima a 8.000 rpm e 1,0 kgfm de torque a 5.500 rpm. O câmbio é automático do tipo CVT (não há embreagem ou pedal de câmbio) e o tanque de combustível tem capacidade para 4,2 litros."
-  //   }
-  // ]
 };
 export default data;
