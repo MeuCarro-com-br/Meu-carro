@@ -7,7 +7,7 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/esm/Container';
 
 const reducer = (state, action) => {
@@ -51,9 +51,9 @@ function HomeScreen() {
           <Col sm={5} className="left-col">
             <t1 className="title-name">Nós temos o que você precisa</t1>
             <p>A melhor coleção para a melhor escolha!</p>
-            <Button>
+            {/* <Button>
               Fazer login
-            </Button>
+            </Button> */}
           </Col>
           <Col sm={7} className="right-col">
             <img src={require('../pics/cars.png')} alt="Img-principal"/>

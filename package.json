@@ -1,0 +1,21 @@
+{
+  "name": "meu-carro",
+  "version": "1.0.0",
+  "description": "E-commerce app de venda de automóveis e motocicletas, foi densenvolvido as telas de Home, informações\r do produto, carrinho de produtos, um ambiente \"Admin\" com: CRUD implementado para gestão dos produtos e estoque de produtos; tem uma interface amigavel e simples para facilitar a navegação do usuario; desenvolvido com  React, Context, Node, Express, MongoDB, Mongoose como principais e algumas outras ferramentas.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd meu-carro-api && npm install && cd ../meu-carro && npm install && npm run build",
+    "start": "node meu-carro-api/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeuCarro-com-br/Meu-carro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeuCarro-com-br/Meu-carro/issues"
+  },
+  "homepage": "https://github.com/MeuCarro-com-br/Meu-carro#readme"
+}

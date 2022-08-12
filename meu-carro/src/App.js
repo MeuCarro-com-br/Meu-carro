@@ -17,6 +17,10 @@ import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SignupScreen from './screens/SignupScreen';
+import PaymentMethodScreen from './screens/PaymentMethodScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen';
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
 // import SearchBox from './components/SearchBox';
 import DashboardScreen from './screens/DashboardScreen';
 import AdminRoute from './components/AdminRoute';
@@ -35,6 +39,7 @@ function App() {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
     window.location.href = '/signin';
   };
   return (
@@ -61,8 +66,11 @@ function App() {
                 {userInfo ? (
                   <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                     <LinkContainer to="/profile">
-                      <NavDropdown.Item>User Profile</NavDropdown.Item>
+                      <NavDropdown.Item>Perfil</NavDropdown.Item>
                     </LinkContainer>
+                    <LinkContainer to="/orderhistory">
+                        <NavDropdown.Item>Historico</NavDropdown.Item>
+                      </LinkContainer>
                     <NavDropdown.Divider />
                     <Link
                       className="dropdown-item"
@@ -100,7 +108,12 @@ function App() {
             <Route path="/signin" element={<SigninScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/signup" element={<SignupScreen />} />
+            <Route path="/placeorder" element={<PlaceOrderScreen />} />
+            <Route path="/order/:id" element={<OrderScreen />} />
+            <Route path="/orderhistory"
+                element={<OrderHistoryScreen />} />
             <Route path="/shipping" element={<ShippingAddressScreen />} />
+            <Route path="/payment" element={<PaymentMethodScreen />} />
             {/* Admin Routes */}
             <Route
               path="/admin/dashboard"
