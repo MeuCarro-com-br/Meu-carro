@@ -1,70 +1,130 @@
-# Getting Started with Create React App Olá Mundo!
+# E-commerce MeuCarro.com.br
+E-commerce app de venda de automóveis e motocicletas, foi densenvolvido as telas de Home, informações
+do produto, carrinho de produtos, um ambiente "Admin" com: CRUD implementado para gestão dos produtos e estoque de produtos; tem uma interface amigavel e simples para facilitar a navegação do usuario; desenvolvido com  React, Context, Node, Express, MongoDB, Mongoose como principais e algumas outras ferramentas.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Conteudo
 
-## Available Scripts
+- [Visão geral](#visao-geral)
+  - [Rascunho](#rascunho)
+  - [Links](#links)
+- [Meu processo](#meu-processo)
+  - [Feito com](#feito-com)
+  - [O que eu aprendi](#o-que-eu-aprendi)
+  - [Uso Local](#uso-local)
+  - [Recursos úteis](#recursos-uteis)
+- [Autor](#autor)
 
-In the project directory, you can run:
+## Visão geral
 
-### `npm start`
+### Rascunho
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![](/meu-carro/public/Rascunho.jpg)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Links
 
-### `npm test`
+- Codigo na web URL: [GitHub](https://github.com/MeuCarro-com-br/Meu-carro)
+<!-- Site ao vivo URL: [Heroku Apps](https://my-contact-list-api.herokuapp.com/)-->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Meu processo
 
-### `npm run build`
+### Feito com
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Desenvolvido com  React, Context, Node, Express, MongoDB, Mongoose.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### O que eu aprendi
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Inserir props condicionais nas tags importadas do bootstrap.
 
-### `npm run eject`
+```jsx
+{userInfo ? (
+  <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
+    <LinkContainer to="/profile">
+      <NavDropdown.Item>User Profile</NavDropdown.Item>
+    </LinkContainer>
+  <NavDropdown.Divider />
+    <Link className="dropdown-item" to="#signout" onClick={signoutHandler}>
+      Sign Out
+    </Link>
+  </NavDropdown>
+) : (
+  <Link className="nav-link" to="/signin">
+    Sign In
+  </Link>
+)}
+```
+Criar models usando mongoose na API.
+```js
+import mongoose from 'mongoose';
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+const productSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true, unique: true },
+    slug: { type: String, required: true, unique: true },
+    image: { type: String, required: true },
+  },
+);
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+const Product = mongoose.model('Product', productSchema);
+export default Product;
+```
+Fazer a conexão com o banco usando o arquivo .env.
+```js
+dotenv.config();
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log('Conectado com o db MeuCarro.com.br');
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Uso Local
 
-## Learn More
+#### 1. Clone o repositorio
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+$ git clone https://github.com/MeuCarro-com-br/Meu-carro.git
+$ cd meu-carro
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 2. Crie um arquivo .env
 
-### Code Splitting
+- Pode duplicar o .env.exemplo na pasta meu-carro-api e renomear esse arquivo de .env
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 3. Crie o banco com MongoDB
 
-### Analyzing the Bundle Size
+- Local MongoDB
+  - Para instalar [aqui](https://www.mongodb.com/try/download/community)
+  - No arquivo .env atualize o MONGODB_URI=mongodb://localhost/meu-carro
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 4. Para iniciar o Backend | meu-carro
 
-### Making a Progressive Web App
+```
+$ cd meu-carro-api
+$ npm install
+$ npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### 5. Para iniciar o Frontend | meu-carro-api
 
-### Advanced Configuration
+```
+# precisa abrir um novo terminal
+$ cd meu-carro
+$ npm install
+$ npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Recursos úteis
 
-### Deployment
+- [Recurso do react](https://github.com/toti-br/react-aula-1-turma-15)
+- [Recurso do CSS react](https://react-bootstrap.netlify.app/)
+- Estes são os recursos que usados no desenvolvimento deste "E-commerce".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Autor
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- PRODUCT OWNER - [Bryan Bravo](https://www.linkedin.com/in/alex-bravo-008-mk)
+- SCRUM MASTER - [Andres Reinoza](https://www.linkedin.com/in/alex-bravo-008-mk)
+- DEVELOPER  - [Maria Rosendo](#)
