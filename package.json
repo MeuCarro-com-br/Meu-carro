@@ -1,7 +1,10 @@
 {
   "name": "meu-carro",
   "version": "1.0.0",
-  "description": "E-commerce app de venda de automóveis e motocicletas, foi densenvolvido as telas de Home, informações\r do produto, carrinho de produtos, um ambiente \"Admin\" com: CRUD implementado para gestão dos produtos e estoque de produtos; tem uma interface amigavel e simples para facilitar a navegação do usuario; desenvolvido com  React, Context, Node, Express, MongoDB, Mongoose como principais e algumas outras ferramentas.",
+  "engines": {
+    "node": "16.x"
+  },
+  "description": "E-commerce app.",
   "main": "index.js",
   "scripts": {
     "build": "cd meu-carro-api && npm install && cd ../meu-carro && npm install && npm run build",
